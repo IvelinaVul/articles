@@ -5,3 +5,38 @@ body {
   word-wrap: normal;
   box-sizing: border-box;
 }
+#main-section{
+    margin-left: 160px;
+}
+
+#logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#logo-container figure {
+  flex: 25%;
+  max-width: 23%;
+  padding: 0 4px;
+}
+
+#logo-container figure img {
+  margin-top: 8px;
+  width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+  #logo-container figure {
+    flex: 50%;
+    max-width: 30%;
+    max-height: 30%
+  }
+}
+@media screen and (max-width: 850px) {
+  #logo-container figure {
+    flex: 100%;
+    max-width: 60%;
+    max-height: 60%;
+  }
+}
