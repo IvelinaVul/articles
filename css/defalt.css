@@ -6,6 +6,9 @@ body {
   word-wrap: normal;
   box-sizing: border-box;
 }
+code{
+  background-color: lightSkyBlue;
+}
 .sidenavigation{
   position: static;
   margin: 0;

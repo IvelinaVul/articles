@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/defalt.css">
 </head>
+
 <body>
   <nav class="sidenavigation">
     <ul>
@@ -28,42 +30,42 @@
     </article>
 
     <article id="phoenix-users">
-     <h3>Известни компании и сайтове, които използват Phoenix </h3>
-     <div id="logo-container">
-       <figure>
-         <a href="https://www.lonelyplanet.com/" target="_blank">
-           <img src="img/logo/lonelyplanet.jpg" alt="LonelyPlanet">
-         </a>
-         <figcaption>Фигура </figcaption>
-       </figure>
-       <figure>
-         <a href="https://www.cargosense.com/" target="_blank">
-           <img src="img/logo/cargosense.png" alt="Cargosense">
-         </a>
-         <figcaption>Фигура </figcaption>
-       </figure>
-       <figure>
-         <a href="https://bleacherreport.com/" target="_blank">
-           <img src="img/logo/bleacherreport.png" alt="BleacherReport">
-         </a>
-         <figcaption>Фигура </figcaption>
-       </figure>
-       <figure>
-         <a href="https://www.everydayhero.com/au/" target="_blank">
-           <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
-         </a>
-         <figcaption>Фигура </figcaption>
-       </figure>
-       <figure>
-         <a href="https://voicelayer.io/" target="_blank">
-           <img src="img/logo/voicelayer.png" alt="VoiceLayer">
-         </a>
-         <figcaption>Фигура </figcaption>
-       </figure>
-     </div>
-   </article>
+      <h3>Известни компании и сайтове, които използват Phoenix </h3>
+      <div id="logo-container">
+        <figure>
+          <a href="https://www.lonelyplanet.com/" target="_blank">
+            <img src="img/logo/lonelyplanet.jpg" alt="LonelyPlanet">
+          </a>
+          <figcaption>Фигура </figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.cargosense.com/" target="_blank">
+            <img src="img/logo/cargosense.png" alt="Cargosense">
+          </a>
+          <figcaption>Фигура </figcaption>
+        </figure>
+        <figure>
+          <a href="https://bleacherreport.com/" target="_blank">
+            <img src="img/logo/bleacherreport.png" alt="BleacherReport">
+          </a>
+          <figcaption>Фигура </figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.everydayhero.com/au/" target="_blank">
+            <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
+          </a>
+          <figcaption>Фигура </figcaption>
+        </figure>
+        <figure>
+          <a href="https://voicelayer.io/" target="_blank">
+            <img src="img/logo/voicelayer.png" alt="VoiceLayer">
+          </a>
+          <figcaption>Фигура </figcaption>
+        </figure>
+      </div>
+    </article>
 
-   <article id="intro-elixir">
+    <article id="intro-elixir">
       <h1>На кратко за Elixir </h1>
       <p>Elixir е функционален език за програмиране с общо предназначение, който върви върху виртуалната машина на Erlang. Създаден е през 2012 година от José Valim за изследователски проект на Plataformatec, които са също част и от Phoenix core
         team.
@@ -77,6 +79,38 @@
       </p>
     </article>
 
+    <article class="instalation">
+      <h3>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова.
+      </h3>
+    </article>
+    <article id="ubuntu" class="elixir-installation">
+      <p>Ubuntu 14.04/16.04/17.04/18.04/19.04</p>
+      <ol>
+        <li>
+          <p>Добавете Erlang Solutions:</p> <code> wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb</code>
+        </li>
+        <li>
+          <p>Изпълнете следната команда: </p> <code> sudo apt-get update</code>
+        </li>
+        <li>
+          <p>Инсталирайте Erlang/OTP платформата заедно с всички нейни приложения:</p> <code>sudo apt-get install esl-erlang</code>
+        </li>
+        <li>
+          <p>Инсталирайте Elixir:</p> <code>sudo apt-get install elixir</code>
+        </li>
+      </ol>
+    </article>
+    <article id="windows" class="elixir-instalation">
+      <p>Windows</p>
+      <ol>
+        <li> <a href="https://github.com/elixir-lang/elixir-windows-setup/releases/download/v2.1/elixir-websetup.exe" target="_blank">Изтеглете инсталационния файл</a></li>
+        </li>
+        <li>Отворете го за да започнете инсталацията.</li>
+    </article>
+    <article class="other" class="elixir-instalation">
+      <p>Други</p>
+      <p>Ако изпозлвате друга операционна система, може да погледнете как да инсталирате Elixir на <a href="https://hexdocs.pm/phoenix/installation.html" target="_blank">инсталационнатa им страница.</a></p>
+    </article>
   </section>
 </body>
 
