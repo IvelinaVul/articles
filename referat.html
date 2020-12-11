@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/defalt.css">
+  <script src="javascript/default.js">
+  </script>
 </head>
 
 <body>
@@ -79,11 +81,22 @@
       </p>
     </article>
 
-    <article class="instalation">
-      <h3>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова.
+    <article id=installation-elixir class="installation elixir">
+      <h3>
+        За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова.
       </h3>
+      <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
+        Ubuntu
+      </button>
+      <button class= "windows" onclick="showInstalationInstructions('elixir','windows')">
+        Windows
+      </button>
+      <button class="other" onclick="showInstalationInstructions('elixir','other')">
+        Други
+      </button>
     </article>
-    <article id="ubuntu" class="elixir-installation">
+
+    <article class="installation elixir ubuntu active">
       <p>Ubuntu 14.04/16.04/17.04/18.04/19.04</p>
       <ol>
         <li>
@@ -100,16 +113,15 @@
         </li>
       </ol>
     </article>
-    <article id="windows" class="elixir-instalation">
+    <article class="installation elixir windows hidden">
       <p>Windows</p>
       <ol>
         <li> <a href="https://github.com/elixir-lang/elixir-windows-setup/releases/download/v2.1/elixir-websetup.exe" target="_blank">Изтеглете инсталационния файл</a></li>
         </li>
         <li>Отворете го за да започнете инсталацията.</li>
     </article>
-    <article class="other" class="elixir-instalation">
-      <p>Други</p>
-      <p>Ако изпозлвате друга операционна система, може да погледнете как да инсталирате Elixir на <a href="https://hexdocs.pm/phoenix/installation.html" target="_blank">инсталационнатa им страница.</a></p>
+    <article class="installation elixir other hidden">
+      <p>Ако използвате друга операционна система, може да погледнете как да инсталирате Elixir на следната <a href="https://elixir-lang.org/install.html" target="_blank">инсталационна страница.</a></p>
     </article>
   </section>
 </body>

@@ -1,4 +1,3 @@
-
 body {
   font-size: 18px;
   font-family: helvetica;
@@ -78,5 +77,43 @@ code{
     flex: 100%;
     max-width: 60%;
     max-height: 60%;
+  }
+}
+.installation.hidden {
+  display: none;
+}
+.installation.active{
+  display: block;
+}
+
+/* fix name of class and add */
+button {
+  font-size: 20px;
+  text-align:left;
+  background-color: inherit;
+  width: 33%;
+  border: none;
+  border-bottom:solid gray 6px;
+
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+
+  display: inline-block;
+
+}
+
+button:hover{
+  border: none;
+  border-bottom:solid gray 6px;
+  background-color: gray;
+}
+button.active {
+  border-bottom:solid red 6px;
+}
+
+@media screen and (max-width: 900px){
+  button{
+    width: 100%;
   }
 }
