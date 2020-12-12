@@ -4,26 +4,29 @@ body {
   margin: 0;
   word-wrap: normal;
   box-sizing: border-box;
+  	counter-reset: figuresCount;
 }
 code{
-  background-color: lightSkyBlue;
+  background-color: lightgray;
 }
-.sidenavigation{
+
+.sidenavigation {
   position: static;
   margin: 0;
   height: 100%;
 }
+
 .sidenavigation ul {
   margin-top: 0;
   margin-right: 30;
   padding: 0;
   list-style-type: none;
-  background-color: #f1f1f1;
-  top:0;
+  top: 0;
   position: absolute;
   height: 100%;
   width: 150px;
 }
+
 .sidenavigation ul li {
   width: 150px;
   position: relative;
@@ -32,20 +35,23 @@ code{
   display: flex;
   text-decoration: none;
 }
-.sidenavigation ul li a{
+
+.sidenavigation ul li a {
   display: block;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
 }
-.sidenavigation ul li a:hover{
+
+.sidenavigation ul li a:hover {
   position: relative;
   background-color: #555;
   color: white;
   width: 150px;
 }
-#main-section{
-    margin-left: 160px;
+
+#main-section {
+  margin-left: 160px;
 }
 
 #logo-container {
@@ -72,6 +78,7 @@ code{
     max-height: 30%
   }
 }
+
 @media screen and (max-width: 850px) {
   #logo-container figure {
     flex: 100%;
@@ -79,40 +86,50 @@ code{
     max-height: 60%;
   }
 }
+
 .installation.hidden {
   display: none;
 }
-.installation.active{
+
+.installation.active {
   display: block;
 }
 
 .installation button {
   font-size: 20px;
-  text-align:left;
+  text-align: left;
   background-color: inherit;
   width: 33%;
   border: none;
-  border-bottom:solid gray 6px;
-
+  border-bottom: solid gray 6px;
   padding-top: 15px;
   padding-bottom: 10px;
   padding-left: 20px;
-
   display: inline-block;
-
 }
 
-.installation button:hover{
+.installation button:hover {
   border: none;
-  border-bottom:solid gray 6px;
+  border-bottom: solid gray 6px;
   background-color: gray;
 }
+
 .installation button.active {
-  border-bottom:solid red 6px;
+  border-bottom: solid red 6px;
 }
 
-@media screen and (max-width: 900px){
-  button{
+@media screen and (max-width: 900px) {
+  button {
     width: 100%;
   }
+}
+
+
+
+figure figcaption {
+	counter-increment: figuresCount;
+}
+
+figure figcaption:before {
+	content: 'Фигура ' counter(figuresCount) ' ';
 }
