@@ -4,11 +4,11 @@ body {
   margin: 0;
   word-wrap: normal;
   box-sizing: border-box;
-  	counter-reset: pictureCount;
-    counter-reset: codeSnippetCount;
-
+  counter-reset: pictureCount;
+  counter-reset: codeSnippetCount;
 }
-code{
+
+code {
   background-color: lightgray;
 }
 
@@ -127,21 +127,29 @@ main {
 }
 
 figure.picture figcaption {
-	counter-increment: pictureCount;
+  counter-increment: pictureCount;
 }
 
 figure.picture figcaption:before {
-	content: 'Фигура ' counter(pictureCount) ' ';
+  content: 'Фигура 'counter(pictureCount) ' ';
 }
-figure.code{
+
+figure.code {
   margin-left: 0px;
 }
 
 figure.code figcaption {
   margin-top: 10px;
-	counter-increment: codeSnippetCount;
+  counter-increment: codeSnippetCount;
 }
 
 figure.code figcaption:before {
-	content: 'Програмен фрагмент ' counter(codeSnippetCount) ': ';
+  content: 'Програмен фрагмент 'counter(codeSnippetCount) ': ';
+}
+
+#resources pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre-line;
+  text-align: left;
 }
