@@ -4,7 +4,9 @@ body {
   margin: 0;
   word-wrap: normal;
   box-sizing: border-box;
-  	counter-reset: figuresCount;
+  	counter-reset: pictureCount;
+    counter-reset: codeSnippetCount;
+
 }
 code{
   background-color: lightgray;
@@ -126,10 +128,22 @@ code{
 
 
 
-figure figcaption {
-	counter-increment: figuresCount;
+figure.picture figcaption {
+	counter-increment: pictureCount;
 }
 
-figure figcaption:before {
-	content: 'Фигура ' counter(figuresCount) ' ';
+figure.picture figcaption:before {
+	content: 'Фигура ' counter(pictureCount) ' ';
+}
+figure.code{
+  margin-left: 0px;
+}
+
+figure.code figcaption {
+  margin-top: 10px;
+	counter-increment: codeSnippetCount;
+}
+
+figure.code figcaption:before {
+	content: 'Програмен фрагмент: ' counter(codeSnippetCount) ' ';
 }

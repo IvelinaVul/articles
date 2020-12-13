@@ -35,35 +35,35 @@
     <article id="phoenix-users">
       <h3>Известни компании и сайтове, които използват Phoenix </h3>
       <div id="logo-container">
-        <figure>
+        <figure class="picture">
           <a href="https://www.lonelyplanet.com/" target="_blank">
             <img src="img/logo/lonelyplanet.png" alt="LonelyPlanet">
           </a>
-            <figcaption></figcaption>
+          <figcaption></figcaption>
         </figure>
-        <figure>
+        <figure class="picture">
           <a href="https://www.cargosense.com/" target="_blank">
             <img src="img/logo/cargosense.png" alt="Cargosense">
           </a>
           <figcaption></figcaption>
         </figure>
-        <figure>
+        <figure class="picture">
           <a href="https://bleacherreport.com/" target="_blank">
             <img src="img/logo/bleacherreport.png" alt="BleacherReport">
           </a>
           <figcaption></figcaption>
         </figure>
-        <figure>
+        <figure class="picture">
           <a href="https://www.everydayhero.com/au/" target="_blank">
             <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
           </a>
-            <figcaption></figcaption>
+          <figcaption></figcaption>
         </figure>
-        <figure>
+        <figure class="picture">
           <a href="https://voicelayer.io/" target="_blank">
             <img src="img/logo/voicelayer.png" alt="VoiceLayer">
           </a>
-            <figcaption></figcaption>
+          <figcaption></figcaption>
         </figure>
       </div>
     </article>
@@ -101,16 +101,34 @@
       <p>Ubuntu 14.04/16.04/17.04/18.04/19.04</p>
       <ol>
         <li>
-          <p>Добавете Erlang Solutions:</p> <code> wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb</code>
+          <p>Добавете Erlang Solutions:</p>
+
+          <figure class="code">
+            <code> wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb</code>
+            <figcaption></figcaption>
+          </figure>
         </li>
         <li>
-          <p>Изпълнете следната команда: </p> <code> sudo apt-get update</code>
+          <p>Изпълнете следната команда: </p>
+          <figure class="code">
+            <code> sudo apt-get update</code>
+            <figcaption></figcaption>
+          </figure>
         </li>
         <li>
-          <p>Инсталирайте Erlang/OTP платформата заедно с всички нейни приложения:</p> <code>sudo apt-get install esl-erlang</code>
+          <p>Инсталирайте Erlang/OTP платформата заедно с всички нейни приложения:</p>
+          <figure class="code">
+            <code>sudo apt-get install esl-erlang</code>
+            <figcaption>
+            </figcaption>
+          </figure>
         </li>
         <li>
-          <p>Инсталирайте Elixir:</p> <code>sudo apt-get install elixir</code>
+          <p>Инсталирайте Elixir:</p>
+          <figure class="code">
+            <code>sudo apt-get install elixir</code>
+            <figcaption></figcaption>
+          </figure>
         </li>
       </ol>
     </article>
@@ -124,6 +142,29 @@
     <article class="installation elixir other hidden">
       <p>Ако използвате друга операционна система, може да погледнете как да инсталирате Elixir на следната <a href="https://elixir-lang.org/install.html" target="_blank">инсталационна страница.</a></p>
     </article>
+    <article id=installation-phoenix class="installation phoenix">
+      <p></p>
+    </article>
+    <article class="">
+      <p>За да започнем да работим с Phoenix е необходимо също така да инсталираме и Hex. Hex е мениджър, който инсталира всички необходими пакети за да използваме Phoenix</p>
+      <p>Можем да инсталираме Hex чрез следната команда:</p>
+      <figure class="code">
+        <code>mix local.hex</code>
+        <figcaption></figcaption>
+      </figure>
+      <p>Можем да проверим дали сме инсталирали правилната версия на Elixir и Erlang, чрез следната команда:</p>
+      <figure class="code">
+        <code>elixir -v </code>
+        <figcaption></figcaption>
+      </figure>
+      <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.6.3</p>
+      <samp>Erlang/OTP 20 [erts-9.3] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
+
+        Elixir 1.6.3
+      </samp>
+
+    </article>
+
   </section>
 </body>
 
