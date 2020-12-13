@@ -52,7 +52,7 @@ code{
   width: 150px;
 }
 
-#main-section {
+main {
   margin-left: 160px;
 }
 
@@ -126,8 +126,6 @@ code{
   }
 }
 
-
-
 figure.picture figcaption {
 	counter-increment: pictureCount;
 }
@@ -145,5 +143,5 @@ figure.code figcaption {
 }
 
 figure.code figcaption:before {
-	content: 'Програмен фрагмент: ' counter(codeSnippetCount) ' ';
+	content: 'Програмен фрагмент ' counter(codeSnippetCount) ': ';
 }

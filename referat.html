@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="bg">
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/defalt.css">
-  <script src="javascript/default.js">
-  </script>
+  <link rel="stylesheet" href="css/defalt.css">
+  <script src="javascript/default.js"></script>
+  <title>Phoenix </title>
   <!--[if IE lte 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
@@ -17,155 +17,166 @@
       <li><a href="#intro-elixir">На кратко за Elixir</a></li>
     </ul>
   </nav>
-  <section id="main-section">
+  <main>
+    <h1>Phoenix</h1>
+    <section id="introduction">
+      <article id="intro-phoenix">
+        <h2>Въведение: </h2>
+        <p>
+          Phoenix представлява набор от инструменти за разработка на web базирани приложения. Той е реализация на Модел-Изглед-Контролер образеца(MVC pattern) написана на функционалния език за програмиране Elixir. Стреми се да предоставя възможност
+          за изграждане на системи с висока производителност и скалируемост.
+        </p>
+        <p>
+          Напоследък Phoenix придобива все по-голяма популярност, не само защото се класира като един от най-бързите web инструменти, но и поради факта че успява да се конкурира по продуктивност дори и с Ruby on Rails. Той разбива мита, че
+          продуктивноста винаги идва за
+          сметка на производителността.
+        </p>
+      </article>
 
-    <article id="intro-phoenix">
-      <h3>Въведение: </h3>
-      <p>
-        Phoenix представлява набор от инструменти за разработка на web базирани приложения. Той е реализация на Модел-Изглед-Контролер образеца(MVC pattern) написана на функционалния език за програмиране Elixir. Стреми се да предоставя възможност
-        за изграждане на системи с висока производителност и скалируемост.
-      </p>
-      <p>
-        Напоследък Phoenix придобива все по-голяма популярност, не само защото се класира като един от най-бързите web инструменти, но и поради факта че успява да се конкурира по продуктивност дори и с Ruby on Rails. Той разбива мита, че
-        продуктивноста винаги идва за
-        сметка на производителността.
-      </p>
-    </article>
-
-    <article id="phoenix-users">
-      <h3>Известни компании и сайтове, които използват Phoenix </h3>
-      <div id="logo-container">
-        <figure class="picture">
-          <a href="https://www.lonelyplanet.com/" target="_blank">
-            <img src="img/logo/lonelyplanet.png" alt="LonelyPlanet">
-          </a>
-          <figcaption></figcaption>
-        </figure>
-        <figure class="picture">
-          <a href="https://www.cargosense.com/" target="_blank">
-            <img src="img/logo/cargosense.png" alt="Cargosense">
-          </a>
-          <figcaption></figcaption>
-        </figure>
-        <figure class="picture">
-          <a href="https://bleacherreport.com/" target="_blank">
-            <img src="img/logo/bleacherreport.png" alt="BleacherReport">
-          </a>
-          <figcaption></figcaption>
-        </figure>
-        <figure class="picture">
-          <a href="https://www.everydayhero.com/au/" target="_blank">
-            <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
-          </a>
-          <figcaption></figcaption>
-        </figure>
-        <figure class="picture">
-          <a href="https://voicelayer.io/" target="_blank">
-            <img src="img/logo/voicelayer.png" alt="VoiceLayer">
-          </a>
-          <figcaption></figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article id="intro-elixir">
-      <h1>На кратко за Elixir </h1>
-      <p>Elixir е функционален език за програмиране с общо предназначение, който върви върху виртуалната машина на Erlang. Създаден е през 2012 година от José Valim за изследователски проект на Plataformatec, които са също част и от Phoenix core
-        team.
-      </p>
-      <p>
-        Той надгражда Erlang като споделя някои от абстракциите му за създаване на дистрибутирани и устойчиви на грешки програми. Elixir предлага вграден механизъм за предодвратяване на грешки. Освен намирането на възможни проблеми още при
-        компилация,
-        виртуалната машина на Erlang поддържа и механизъм за изолиране на модули, при които е възникнал проблем. Механизмът позволява програмата да работи дори и ако нещо не върви както трябва.</p>
-      <p>
-        Други позитиви, който поддържа са ниската латентност и високата конкурентост, които позволяват да се обработят огромно количество от съобщения с минимално закъснение и да се поддържат до няколко хиляди потребители едновременно.
-      </p>
-    </article>
-
-    <article id=installation-elixir class="installation elixir">
-      <h3>
-        За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова.
-      </h3>
-      <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
-        Ubuntu
-      </button>
-      <button class="windows" onclick="showInstalationInstructions('elixir','windows')">
-        Windows
-      </button>
-      <button class="other" onclick="showInstalationInstructions('elixir','other')">
-        Други
-      </button>
-    </article>
-
-    <article class="installation elixir ubuntu active">
-      <p>Ubuntu 14.04/16.04/17.04/18.04/19.04</p>
-      <ol>
-        <li>
-          <p>Добавете Erlang Solutions:</p>
-
-          <figure class="code">
-            <code> wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb</code>
+      <article id="phoenix-users">
+        <h2>Известни компании и сайтове, които използват Phoenix </h2>
+        <div id="logo-container">
+          <figure class="picture">
+            <a href="https://www.lonelyplanet.com/" target="_blank">
+              <img src="img/logo/lonelyplanet.png" alt="LonelyPlanet">
+            </a>
             <figcaption></figcaption>
           </figure>
-        </li>
-        <li>
-          <p>Изпълнете следната команда: </p>
-          <figure class="code">
-            <code> sudo apt-get update</code>
+          <figure class="picture">
+            <a href="https://www.cargosense.com/" target="_blank">
+              <img src="img/logo/cargosense.png" alt="Cargosense">
+            </a>
             <figcaption></figcaption>
           </figure>
-        </li>
-        <li>
-          <p>Инсталирайте Erlang/OTP платформата заедно с всички нейни приложения:</p>
-          <figure class="code">
-            <code>sudo apt-get install esl-erlang</code>
-            <figcaption>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>Инсталирайте Elixir:</p>
-          <figure class="code">
-            <code>sudo apt-get install elixir</code>
+          <figure class="picture">
+            <a href="https://bleacherreport.com/" target="_blank">
+              <img src="img/logo/bleacherreport.png" alt="BleacherReport">
+            </a>
             <figcaption></figcaption>
           </figure>
-        </li>
-      </ol>
-    </article>
-    <article class="installation elixir windows hidden">
-      <p>Windows</p>
-      <ol>
-        <li> <a href="https://github.com/elixir-lang/elixir-windows-setup/releases/download/v2.1/elixir-websetup.exe" target="_blank">Изтеглете инсталационния файл</a></li>
-        </li>
-        <li>Отворете го за да започнете инсталацията.</li>
-    </article>
-    <article class="installation elixir other hidden">
-      <p>Ако използвате друга операционна система, може да погледнете как да инсталирате Elixir на следната <a href="https://elixir-lang.org/install.html" target="_blank">инсталационна страница.</a></p>
-    </article>
-    <article id=installation-phoenix class="installation phoenix">
-      <p></p>
-    </article>
-    <article class="">
-      <p>За да започнем да работим с Phoenix е необходимо също така да инсталираме и Hex. Hex е мениджър, който инсталира всички необходими пакети за да използваме Phoenix</p>
-      <p>Можем да инсталираме Hex чрез следната команда:</p>
-      <figure class="code">
-        <code>mix local.hex</code>
-        <figcaption></figcaption>
-      </figure>
-      <p>Можем да проверим дали сме инсталирали правилната версия на Elixir и Erlang, чрез следната команда:</p>
-      <figure class="code">
-        <code>elixir -v </code>
-        <figcaption></figcaption>
-      </figure>
-      <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.6.3</p>
-      <samp>Erlang/OTP 20 [erts-9.3] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
+          <figure class="picture">
+            <a href="https://www.everydayhero.com/au/" target="_blank">
+              <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
+            </a>
+            <figcaption></figcaption>
+          </figure>
+          <figure class="picture">
+            <a href="https://voicelayer.io/" target="_blank">
+              <img src="img/logo/voicelayer.png" alt="VoiceLayer">
+            </a>
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </article>
 
-        Elixir 1.6.3
-      </samp>
+      <article id="intro-elixir">
+        <h2>На кратко за Elixir </h2>
+        <p>
+          Elixir е функционален език за програмиране с общо предназначение, който върви върху виртуалната машина на Erlang. Създаден е през 2012 година от José Valim за изследователски проект на Plataformatec, които са също част и от Phoenix core
+          team.
+        </p>
+        <p>
+          Той надгражда Erlang като споделя някои от абстракциите му за създаване на дистрибутирани и устойчиви на грешки програми. Elixir предлага вграден механизъм за предодвратяване на грешки. Освен намирането на възможни проблеми още при
+          компилация,
+          виртуалната машина на Erlang поддържа и механизъм за изолиране на модули, при които е възникнал проблем. Механизмът позволява програмата да работи дори и ако нещо не върви както трябва.</p>
+        <p>
+          Други позитиви, който поддържа са ниската латентност и високата конкурентост, които позволяват да се обработят огромно количество от съобщения с минимално закъснение и да се поддържат до няколко хиляди потребители едновременно.
+        </p>
+      </article>
+    </section>
+    <section id="installation">
+      <h2>Инсталация</h2>
+      <article id=installation-elixir class="installation elixir">
+        <h3>Инсталация на Elixir</h3>
+        <p>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова. Инсталираме Elixir следвайки инструкциите по-долу за определената операционна система</p>
+        <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
+          Ubuntu
+        </button>
+        <button class="windows" onclick="showInstalationInstructions('elixir','windows')">
+          Windows
+        </button>
+        <button class="other" onclick="showInstalationInstructions('elixir','other')">
+          Други
+        </button>
+      </article>
 
-    </article>
+      <article class="installation elixir ubuntu active">
+        <h4></h4>
+        <p>Инструкциите са за версии на Ubuntu: 14.04/16.04/17.04/18.04/19.04</p>
+        <ol>
+          <li>
+            <p>Добавете Erlang Solutions:</p>
+            <figure class="code">
+              <code> wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb</code>
+              <figcaption></figcaption>
+            </figure>
+          </li>
+          <li>
+            <p>Изпълнете следната команда:</p>
+            <figure class="code">
+              <code> sudo apt-get update</code>
+              <figcaption></figcaption>
+            </figure>
+          </li>
+          <li>
+            <p>Инсталирайте Erlang/OTP платформата заедно с всички нейни приложения:</p>
+            <figure class="code">
+              <code>sudo apt-get install esl-erlang</code>
+              <figcaption></figcaption>
+            </figure>
+          </li>
+          <li>
+            <p>Инсталирайте Elixir:</p>
+            <figure class="code">
+              <code>sudo apt-get install elixir</code>
+              <figcaption></figcaption>
+            </figure>
+          </li>
+        </ol>
+      </article>
+      <article class="installation elixir windows hidden">
+        <ol>
+          <li> <a download href="https://github.com/elixir-lang/elixir-windows-setup/releases/download/v2.1/elixir-websetup.exe" target="_blank">Изтеглете инсталационния файл</a></li>
+          </li>
+          <li>Отворете го за да започнете инсталацията.</li>
+          <li>Натискайте напред докато инсталацията не завърши.</li>
+      </article>
+      <article class="installation elixir other hidden">
+        <p>Ако използвате друга операционна система или версия, може да погледнете как да инсталирате Elixir на следната <a href="https://elixir-lang.org/install.html" target="_blank">инсталационна страница.</a></p>
+      </article>
+      <article class="version-check">
+        <h3>Проверка на версията на Elixir и Erlang</h3>
+        <p>Можем да проверим дали сме инсталирали правилната версия на Elixir и Erlang, чрез следната команда:</p>
+        <figure class="code">
+          <code>elixir -v </code>
+          <figcaption>Версия на Elixir</figcaption>
+        </figure>
+        <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.6.3</p>
+        <samp>Erlang/OTP 20 [erts-9.3] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]<br>
+          Elixir 1.6.3
+        </samp>
+      </article>
+      <article class="hex-installation">
+        <h3>Инсталация на Hex</h3>
+        <p>За да започнем да работим с Phoenix, освен Elixir, е необходимо да имаме и Hex. Hex е мениджър, който служи за да инсталира всички необходими пакети за използването на Phoenix.
+        </p>
+        <p>Можем да инсталираме Hex чрез следната команда:</p>
+        <figure class="code">
+          <code>mix local.hex</code>
+          <figcaption></figcaption>
+        </figure>
+      </article>
+      <article class="installation-phoenix">
+        <h3>Инсталация на Phoenix </h3>
+        <p>След като се погрижихме за Elixir и Hex остава единствено да инсталираме Phoenix. За да инсталираме последната версия на Phoenix трябва да изпълним следната команда:</p>
+        <figure class="code">
+          <code>mix archive.install hex phx_new 1.5.7</code>
+          <figcaption></figcaption>
+        </figure>
+      </article>
 
-  </section>
+    </section>
+  </main>
 </body>
 
 </html>
