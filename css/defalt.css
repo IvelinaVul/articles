@@ -4,7 +4,6 @@ body {
   margin: 0;
   word-wrap: normal;
   box-sizing: border-box;
-  counter-reset: pictureCount;
   counter-reset: codeSnippetCount;
 }
 
@@ -126,14 +125,6 @@ main {
   }
 }
 
-figure.picture figcaption {
-  counter-increment: pictureCount;
-}
-
-figure.picture figcaption:before {
-  content: 'Фигура 'counter(pictureCount) ' ';
-}
-
 figure.code {
   margin-left: 0px;
 }
@@ -152,4 +143,23 @@ figure.code figcaption:before {
   font-family: monospace;
   white-space: pre-line;
   text-align: left;
+}
+
+pre.bash {
+  white-space: pre-wrap;
+  word-break: normal;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 80%;
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  display: inline-block;
+}
+.single.picture img{
+  display: block;
+  margin: auto;
+  width: 70%
 }

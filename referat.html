@@ -36,31 +36,31 @@
       <article id="phoenix-users">
         <h2>Известни компании и сайтове, които използват Phoenix </h2>
         <div id="logo-container">
-          <figure class="picture">
+          <figure>
             <a href="https://www.lonelyplanet.com/" target="_blank">
               <img src="img/logo/lonelyplanet.png" alt="LonelyPlanet">
             </a>
             <figcaption></figcaption>
           </figure>
-          <figure class="picture">
+          <figure>
             <a href="https://www.cargosense.com/" target="_blank">
               <img src="img/logo/cargosense.png" alt="Cargosense">
             </a>
             <figcaption></figcaption>
           </figure>
-          <figure class="picture">
+          <figure>
             <a href="https://bleacherreport.com/" target="_blank">
               <img src="img/logo/bleacherreport.png" alt="BleacherReport">
             </a>
             <figcaption></figcaption>
           </figure>
-          <figure class="picture">
+          <figure>
             <a href="https://www.everydayhero.com/au/" target="_blank">
               <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
             </a>
             <figcaption></figcaption>
           </figure>
-          <figure class="picture">
+          <figure>
             <a href="https://voicelayer.io/" target="_blank">
               <img src="img/logo/voicelayer.png" alt="VoiceLayer">
             </a>
@@ -151,10 +151,10 @@
           <code>elixir -v </code>
           <figcaption>Версия на Elixir</figcaption>
         </figure>
-        <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.6.3</p>
-        <samp>Erlang/OTP 20 [erts-9.3] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]<br>
-          Elixir 1.6.3
-        </samp>
+        <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.11.2</p>
+        <pre class="bash">Erlang/OTP 23 [erts-11.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+Elixir 1.11.2 (compiled with Erlang/OTP 23)</pre>
       </article>
       <article class="hex-installation">
         <h3>Инсталация на Hex</h3>
@@ -166,6 +166,10 @@
           <figcaption></figcaption>
         </figure>
       </article>
+      <article class="nodejs-installation">
+        <h3>Инсталация на NodeJs</h3>
+      <p>TODOTODOTODOTODO</p>
+      </article>
       <article class="installation-phoenix">
         <h3>Инсталация на Phoenix </h3>
         <p>След като се погрижихме за Elixir и Hex остава единствено да инсталираме Phoenix. За да инсталираме последната версия на Phoenix трябва да изпълним следната команда:</p>
@@ -175,6 +179,75 @@
         </figure>
       </article>
     </section>
+    <section id="getting-started-guide">
+      <h2>Примерен начален проект с Phoenix</h2>
+      <article>
+        <h3>Предговор</h3>
+        <p>Целта е да разработим опростен пример за създаване на приложения с Phoenix, затова няма да използваме система за управление на бази от данни.</p>
+        <p>Phoenix предлага няколко различни среди. В примера ще използваме development средата, тъй като тя предлага повече възможности като автоматично презареждане след промени и по-подробни съобщения за грешки.</p>
+      </article>
+      <article>
+        <h3>Създаване на проект</h3>
+        <p>За да създадем нов Phoenix проект с името application_name използваме командата:</p>
+        <figure class="code">
+          <code>mix phx.new application_name</code>
+          <figcaption>Създаване на проект</figcaption>
+        </figure>
+        <p>В нашия пример, както вече споменахме, няма да използваме система за управление на бази от данни. Следователно ще създадем приложение, което да не използва конектора към базата данни Ecto. Това можем да постигнем като добавим --no-ecto
+          след името на проекта.
+        </p>
+        <p>Отваряме директорията, в която искаме да бъде създаден новия проект и изпълняваме командата:</p>
+        <figure class="code">
+          <code>mix phx.new demo --no-ecto</code>
+          <figcaption>Създаване на проект без Ecto</figcaption>
+        </figure>
+        <p>На конзолата може да видим следния резултат:</p>
+        <pre class="bash">
+$ mix phx.new demo --no-ecto
+* creating demo/config/config.exs
+* creating demo/config/dev.exs
+[...]
+Fetch and install dependencies? [Yn] Y
+[...]
+We are almost there! The following steps are missing:
+
+    $ cd demo
+
+Start your Phoenix app with:
+
+    $ mix phx.server
+
+You can also run your app inside IEx (Interactive Elixir) as:
+
+    $ iex -S mix phx.server
+      </pre>
+        <p>Отваряме нивосъздадената demo директория и след това стартираме Phoenix сървъра, чрез командата:</p>
+        <figure class="code">
+          <code>mix phx.server</code>
+          <figcaption>Стартиране на Phoenix сървъра</figcaption>
+        </figure>
+        <pre class="bash">
+Compiling 13 files (.ex)
+Generated demo app
+[info] Running DemoWeb.Endpoint with cowboy 2.7.0 at 0.0.0.0:4000 (http)
+[info] Access DemoWeb.Endpoint at <mark>http://localhost:4000</mark>
+
+webpack is watching the files…
+
+Hash: f3ee21a2f5780f52f176
+Version: webpack 4.41.5
+[...]
+      </pre>
+        <p>
+          По време на изпълнение на командата кодът, който до момента не е бил компилиран, се компилира. За да стартираме началната страница на Phoenix отваряме в избран от нас browser следния адрес http://localhost:4000.
+        </p>
+        <figure class="single picture">
+          <img src="img/getting-started/phoenix-start.png" alt="Phoenix start">
+          <figcaption>"Фигура"</figcaption>
+        </figure>
+      </article>
+    </section>
+
     <section id="resources">
       <h2>Източници</h2>
       <article>
@@ -228,6 +301,12 @@
               Последно посетен на 10.12.2020.
             </pre>
           </li>
+          <li>
+            <pre>Stefan Wintermeyer,"Phoenix Beginners's Guide/Phoenix Basics"
+              <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/phoenix-basics.html" target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/phoenix-basics.html</a>
+              Последно посетен на 14.12.2020.
+            </pre>
+          </li>
         </ol>
       </article>
       <article>
@@ -263,6 +342,13 @@
               "VoiceLayer Logo"
               <a href="https://www.aina-wireless.com/wp-content/uploads/2019/10/Voicelayer-logo-320x120.png" target="_blank">https://www.aina-wireless.com/wp-content/uploads/2019/10/Voicelayer-logo-320x120.png</a>
               Последно посетен на 11.12.2020
+            </pre>
+          </li>
+          <li>
+            <pre>
+              "Phoenix start"
+              <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png", target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png</a>
+
             </pre>
           </li>
         </ol>
