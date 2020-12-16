@@ -36,35 +36,35 @@
       <article id="phoenix-users">
         <h2>Известни компании и сайтове, които използват Phoenix </h2>
         <div id="logo-container">
-          <figure>
+          <figure id="figure1">
             <a href="https://www.lonelyplanet.com/" target="_blank">
-              <img src="img/logo/lonelyplanet.png" alt="LonelyPlanet">
+              <img src="img/logo/lonelyplanet.png" alt="Lonely Planet Logo">
             </a>
-            <figcaption></figcaption>
+            <figcaption>Фигура 1: Lonely Planet Лого</figcaption>
           </figure>
-          <figure>
+          <figure id="figure2">
             <a href="https://www.cargosense.com/" target="_blank">
-              <img src="img/logo/cargosense.png" alt="Cargosense">
+              <img src="img/logo/cargosense.png" alt="Cargosense Logo">
             </a>
-            <figcaption></figcaption>
+            <figcaption>Фигура 2: Cargosense Лого</figcaption>
           </figure>
-          <figure>
+          <figure id="figure3">
             <a href="https://bleacherreport.com/" target="_blank">
-              <img src="img/logo/bleacherreport.png" alt="BleacherReport">
+              <img src="img/logo/bleacherreport.png" alt="BleacherReport Logo">
             </a>
-            <figcaption></figcaption>
+            <figcaption>Фигура 3: BleacherReport Лого</figcaption>
           </figure>
-          <figure>
+          <figure id="figure4">
             <a href="https://www.everydayhero.com/au/" target="_blank">
-              <img src="img/logo/everydayhero.jpg" alt="Everydayhero">
+              <img src="img/logo/everydayhero.jpg" alt="Everydayhero Logo">
             </a>
-            <figcaption></figcaption>
+            <figcaption>Фигура 4: Everydayhero Лого</figcaption>
           </figure>
-          <figure>
+          <figure id="figure5">
             <a href="https://voicelayer.io/" target="_blank">
-              <img src="img/logo/voicelayer.png" alt="VoiceLayer">
+              <img src="img/logo/voicelayer.png" alt="VoiceLayer Logo">
             </a>
-            <figcaption></figcaption>
+            <figcaption>Фигура 5: VoiceLayer Лого</figcaption>
           </figure>
         </div>
       </article>
@@ -244,9 +244,9 @@ Version: webpack 4.41.5
         <p>
           По време на изпълнение на командата кодът, който до момента не е бил компилиран, се компилира. За да стартираме началната страница на Phoenix отваряме в избран от нас browser следния адрес http://localhost:4000.
         </p>
-        <figure class="single picture">
+        <figure id="figure6" class="single picture">
           <img src="img/getting-started/phoenix-start.png" alt="Phoenix start">
-          <figcaption>"Фигура"</figcaption>
+          <figcaption>Фигура 6: Начална Страница Phoenix</figcaption>
         </figure>
       </article>
       <article>
@@ -337,10 +337,10 @@ end
         </section>
         <section>
           <p>Ако отворим http://localhost:4000/hello ще видим следния резултат</p>
-          <figure class="picture">
-          <img src="img/getting-started/phoenix-hello.png" alt="Our hello page">
-          <figcaption>Hello станица</figcaption>
-        </figure>
+          <figure class="single picture">
+            <img src="img/getting-started/phoenix-hello.png" alt="Our hello page">
+            <figcaption>Фигура 7: Phoenix Hello станица</figcaption>
+          </figure>
 
         </section>
       </article>
@@ -422,42 +422,44 @@ end
         <h3>Фигури</h3>
         <ol>
           <li>
-            <pre>"LonelyPlanet Logo"
+            <pre>
+              <a class="figure name" href="#figure1">"LonelyPlanet Logo"</a>
               <a href="https://logos-download.com/38328-lonely-planet-logo-download.html" target="_blank">https://logos-download.com/38328-lonely-planet-logo-download.html</a>
               Последно посетен на 11.12.2020
             </pre>
           </li>
           <li>
             <pre>
-              "Cargosense Logo"
+              <a class="figure name" href="#figure2">"Cargosense Logo"</a>
               <a href="https://www.cargosense.com/static/img/cargosense-og-preview.png" target="_blank">https://www.cargosense.com/static/img/cargosense-og-preview.png</a>
               Последно посетен на 11.12.2020
             </pre>
           </li>
           <li>
-            <pre>"BleacherReport Logo"
+            <pre>
+            <a class="figure name" href="#figure3">"BleacherReport Logo"</a>
             <a href="https://static-assets.bleacherreport.net/img/br_630_height.png" target="_blank">https://static-assets.bleacherreport.net/img/br_630_height.png</a>
             Последно посетен на 11.12.2020
           </pre>
           </li>
           <li>
-            <pre>"Everydayhero Logo"
+            <pre>
+              <a class="figure name" href="#figure4">"Everydayhero Logo"</a>
               <a href="https://www.worldchildcancer.org/sites/default/files/everydayhero_image.jpg">https://www.worldchildcancer.org/sites/default/files/everydayhero_image.jpg</a>
               Последно посетен на 11.12.2020
             </pre>
           </li>
           <li>
             <pre>
-              "VoiceLayer Logo"
+              <a class="figure name" href="#figure5"> "VoiceLayer Logo"</a>
               <a href="https://www.aina-wireless.com/wp-content/uploads/2019/10/Voicelayer-logo-320x120.png" target="_blank">https://www.aina-wireless.com/wp-content/uploads/2019/10/Voicelayer-logo-320x120.png</a>
               Последно посетен на 11.12.2020
             </pre>
           </li>
           <li>
             <pre>
-              "Phoenix start"
+              <a class="figure name" href="#figure6">"Phoenix start"</a>
               <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png", target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png</a>
-
             </pre>
           </li>
         </ol>

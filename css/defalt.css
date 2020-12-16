@@ -57,6 +57,7 @@ main {
 
 #logo-container {
   display: flex;
+  align-items: baseline;
   flex-wrap: wrap;
   padding: 0 4px;
 }
@@ -65,6 +66,10 @@ main {
   flex: 25%;
   max-width: 23%;
   padding: 0 4px;
+}
+
+#logo-container figure figcaption {
+  padding-top: 10px;
 }
 
 #logo-container figure img {
@@ -145,6 +150,11 @@ figure.code figcaption:before {
   text-align: left;
 }
 
+a.figure.name {
+  color: black;
+  text-decoration: none
+}
+
 pre.bash {
   white-space: pre-wrap;
   word-break: normal;
@@ -156,18 +166,22 @@ pre.bash {
   font-family: monospace;
   display: inline-block;
 }
+
 pre code {
   display: inline-block;
   padding: 10px;
 }
-pre code.elixir{
-  
-}
+
+pre code.elixir {}
 
 .single.picture img {
   display: block;
   margin: auto;
   width: 70%
+}
+.single.picture figcaption{
+  text-align: center;
+  padding-top: 10px;
 }
 
 kbd {
