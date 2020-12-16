@@ -7,8 +7,8 @@ body {
   counter-reset: codeSnippetCount;
 }
 
-code {
-  background-color: lightgray;
+main {
+  margin-left: 160px;
 }
 
 .sidenavigation {
@@ -49,10 +49,6 @@ code {
   background-color: #555;
   color: white;
   width: 150px;
-}
-
-main {
-  margin-left: 160px;
 }
 
 #logo-container {
@@ -125,41 +121,45 @@ main {
 }
 
 @media screen and (max-width: 900px) {
-  button {
+  .installation button {
     width: 100%;
   }
 }
 
-figure.code {
+figure.code, figure.samp {
+  background-color: #3B4D6C;
+  font-family: monospace;
   margin-left: 0px;
+  display: inline-block;
+  color: white;
+  width: auto;
+  padding: 10px;
 }
 
-figure.code figcaption {
+figure.code figcaption, figure.samp figcaption {
+  background-color: gray;
   margin-top: 10px;
+  font-size: 16px;
   counter-increment: codeSnippetCount;
 }
 
-figure.code figcaption:before {
+figure.code figcaption:before, figure.samp figcaption:before {
   content: 'Програмен фрагмент 'counter(codeSnippetCount) ': ';
 }
 
-#resources pre {
-  display: block;
+code {
+  background-color: #3B4D6C;
+  width: auto;
+  color: white;
+  font-size: 16px;
   font-family: monospace;
-  white-space: pre-line;
-  text-align: left;
+  display: inline-block;
 }
 
-a.figure.name {
-  color: black;
-  text-decoration: none
-}
-
-pre.bash {
+pre samp {
   white-space: pre-wrap;
   word-break: normal;
-  background-color: black;
-  padding: 10px;
+  background-color: #3B4D6C;
   width: auto;
   color: white;
   font-size: 16px;
@@ -169,19 +169,6 @@ pre.bash {
 
 pre code {
   display: inline-block;
-  padding: 10px;
-}
-
-pre code.elixir {}
-
-.single.picture img {
-  display: block;
-  margin: auto;
-  width: 70%
-}
-.single.picture figcaption{
-  text-align: center;
-  padding-top: 10px;
 }
 
 kbd {
@@ -194,4 +181,27 @@ kbd {
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
+}
+
+.single.picture img {
+  display: block;
+  margin: auto;
+  width: 70%
+}
+
+.single.picture figcaption {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#resources pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre-line;
+  text-align: left;
+}
+
+a.figure.name {
+  color: black;
+  text-decoration: none
 }

@@ -88,7 +88,7 @@
       <h2>Инсталация</h2>
       <article id=installation-elixir class="installation elixir">
         <h3>Инсталация на Elixir</h3>
-        <p>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова. Инсталираме Elixir следвайки инструкциите по-долу за определената операционна система</p>
+        <p>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова. Инсталираме Elixir следвайки инструкциите по-долу за определената операционна система.</p>
         <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
           Ubuntu
         </button>
@@ -152,9 +152,13 @@
           <figcaption>Версия на Elixir</figcaption>
         </figure>
         <p>На конзолата ще се покаже подобен текст. В случая версията на Elixir е 1.11.2</p>
-        <pre class="bash">Erlang/OTP 23 [erts-11.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+        <figure class="samp">
+          <pre><samp>Erlang/OTP 23 [erts-11.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
 
-Elixir 1.11.2 (compiled with Erlang/OTP 23)</pre>
+Elixir 1.11.2 (compiled with Erlang/OTP 23)</samp></pre>
+
+          <figcaption></figcaption>
+        </figure>
       </article>
       <article class="hex-installation">
         <h3>Инсталация на Hex</h3>
@@ -202,7 +206,8 @@ Elixir 1.11.2 (compiled with Erlang/OTP 23)</pre>
           <figcaption>Създаване на проект без Ecto</figcaption>
         </figure>
         <p>На конзолата може да видим следния резултат:</p>
-        <pre class="bash">
+        <figure class="samp">
+          <pre> <samp>
 $ mix phx.new demo --no-ecto
 * creating demo/config/config.exs
 * creating demo/config/dev.exs
@@ -220,7 +225,9 @@ Start your Phoenix app with:
 You can also run your app inside IEx (Interactive Elixir) as:
 
     $ iex -S mix phx.server
-      </pre>
+      </samp> </pre>
+          <figcaption></figcaption>
+        </figure>
       </article>
       <article>
         <h3>Стартиране на проект</h3>
@@ -229,7 +236,9 @@ You can also run your app inside IEx (Interactive Elixir) as:
           <code>mix phx.server</code>
           <figcaption>Стартиране на Phoenix сървъра</figcaption>
         </figure>
-        <pre class="bash">
+        <p>На конзолата виждаме следния резултат:</p>
+        <figure class="samp">
+          <pre><samp>
 Compiling 13 files (.ex)
 Generated demo app
 [info] Running DemoWeb.Endpoint with cowboy 2.7.0 at 0.0.0.0:4000 (http)
@@ -240,7 +249,9 @@ webpack is watching the files…
 Hash: f3ee21a2f5780f52f176
 Version: webpack 4.41.5
 [...]
-      </pre>
+      <samp></pre>
+          <figcaption></figcaption>
+        </figure>
         <p>
           По време на изпълнение на командата кодът, който до момента не е бил компилиран, се компилира. За да стартираме началната страница на Phoenix отваряме в избран от нас browser следния адрес http://localhost:4000.
         </p>
@@ -265,14 +276,19 @@ Version: webpack 4.41.5
           </p>
           <p>
             При създаване на проект автоматично се генерира файл за рутер, намиращ се на
-          <pre class="bash">lib/applicationname_web/router.ex</pre>. Нашият примерен проект се казва demo, така че файлът ще бъде създаден в директорията
-          <pre class="bash">lib/demo_web/</pre>.
+            <mark>lib/applicationname_web/router.ex</mark>. Нашият примерен проект се казва demo, така че файлът ще бъде създаден в директорията
+            <mark>lib/demo_web/</mark>.
           </p>
           <p>За да добавим нашата hello станица е необходимо в рутера да добавим нов ред който да съпоставя на GET заявка за /hello действието :hello на контролера HelloController, който предстои да създадем.
           </p>
-          <p>И така добавяме : <code>get "/hello", HelloController, :hello</code>.</p>
-          <pre><code >
-defmodule DemoWeb.Router do
+          <p>И така добавяме :
+          <figure class="code"> <code>get "/hello", HelloController, :hello</code>
+            <figcaption></figcaption>
+          </figure>.
+          </p>
+
+          <figure class="code">
+            <pre><code >defmodule DemoWeb.Router do
   use DemoWeb, :router
 
   [...]
@@ -286,14 +302,16 @@ defmodule DemoWeb.Router do
 
   [...]
 </code></pre>
+            <figcaption></figcaption>
+          </figure>
         </section>
         <section>
           <h4>Създаване на Контролер</h4>
           <p>
             Следващата стъпка е да създадем HelloController-а, който да обработи заявката. За целта създаваме нов файл lib/demo_web/controllers/hello_controller.ex в който добавяме следното:
           </p>
-          <pre><code>
-defmodule DemoWeb.HelloController do
+          <figure class="code">
+            <pre><code>defmodule DemoWeb.HelloController do
   use DemoWeb, :controller
 
   def hello(conn, _params) do
@@ -301,39 +319,51 @@ defmodule DemoWeb.HelloController do
   end
 end
            </code></pre>
+            <figcaption></figcaption>
+          </figure>
 
         </section>
         <!-- fix h1 in code example -->
         <section>
           <h4>Създаване на темплейт</h4>
-          <p> Файловете в директорията lib/demo_web/templates/ наричаме темплейти. Те са с разширение eex, което идва от Embedded Elixir и означава че представляват смесица от статичен HTML и динамичен код написан на Elixir, който генерира HTML.
+          <p> Файловете в директорията <mark>lib/demo_web/templates/</mark> наричаме темплейти. Те са с разширение eex, което идва от Embedded Elixir и означава че представляват смесица от статичен HTML и динамичен код написан на Elixir, който
+            генерира HTML.
             Phoenix автоматично създава два темплейта:
           </p>
-          <pre class="bash">
-$ tree lib/demo_web/templates/
+          <figure class="samp">
+            <pre><samp>$ tree lib/demo_web/templates/
 lib/demo_web/templates/
 ├── layout
 │   └── app.html.eex
 └── page
-    └── index.html.eex</pre>
+    └── index.html.eex</samp></pre>
+            <figcaption></figcaption>
+          </figure>
 
           <p>
             За да добавим нов темплейт за нашата hello станица просто трябва да създадем следния файл
-          <pre class="bash"> lib/demo_web/templates/hello/hello.html.eex</pre>.
-          Казахме, че искаме тя да показва текста "hello" затова в него добавяме следния ред<code>
-            <h1> Hello World! </h1>
-          </code>
+            <mark> lib/demo_web/templates/hello/hello.html.eex</mark>.
+            Казахме, че искаме тя да показва текста "hello" затова в него добавяме следния ред
+          <figure class="code">
+            <code>
+              <h1> Hello World! </h1>
+            </code>
+            <figcaption></figcaption>
+          </figure>
+
           </p>
         </section>
         <section>
           <h4>Създаване на изглед</h4>
-          <p>Остана единствено да създадем Изглед. </p>
-          <p>we need to create a view file, called hello_view.ex, and add it to the lib/demo_web/views directory:</p>
-          <pre><code>
+          <p>Остана единствено да създадем файл за изглед с име hello_view.ex, който да се намира в директорията <mark>lib/demo_web/views</mark> и да има следното съдържание: </p>
+          <figure class="code">
+            <pre><code>
 defmodule DemoWeb.HelloView do
   use DemoWeb, :view
 end
         </code></pre>
+            <figcaption></figcaption>
+          </figure>
         </section>
         <section>
           <p>Ако отворим http://localhost:4000/hello ще видим следния резултат</p>
@@ -341,7 +371,6 @@ end
             <img src="img/getting-started/phoenix-hello.png" alt="Our hello page">
             <figcaption>Фигура 7: Phoenix Hello станица</figcaption>
           </figure>
-
         </section>
       </article>
       <article>
