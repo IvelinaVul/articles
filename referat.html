@@ -12,15 +12,31 @@
 <body>
   <nav class="sidenavigation">
     <ul>
-      <li><a href="#intro-phoenix">Въведение:</a></li>
+      <!-- introduction -->
+      <li><a href="#phoenix-intro">Въведение:</a></li>
       <li><a href="#phoenix-users">Известни потребители:</a></li>
-      <li><a href="#intro-elixir">На кратко за Elixir</a></li>
+      <li><a href="#elixir-intro">На кратко за Elixir</a></li>
+      <!-- installation -->
+      <li><a href="#elixir-installation">Инсталация Elixir</a> </li>
+      <li><a href="#elixir-version-check">Проверка на версия</a></li>
+      <li> <a href="#hex-installation">Hex инсталация</a> </li>
+      <li><a href="#nodejs-installation">NodeJs инсталация </a></li>
+      <li><a href="#phoenix-installation">Phoenix инсталация </a> </li> 
+
+      <!-- guide -->
+      <li> <a href="#intro-to-guide">Примерен проект </a></li>
+      <li><a href="#project-creation-guide">Създаване на проект</a> </li>
+      <li><a href="#project-start-guide">Стартиране на проект </a></li>
+      <li><a href="#add-page-guide">Добавяне на страница</a> </li>
+      <li><a href="#stop-guide">Спиране </a></li>
+
+
     </ul>
   </nav>
   <main>
     <h1>Phoenix</h1>
-    <section id="introduction">
-      <article id="intro-phoenix">
+    <section id="intro">
+      <article id="phoenix-intro">
         <h2>Въведение: </h2>
         <p>
           Phoenix представлява набор от инструменти за разработка на web базирани приложения. Той е реализация на Модел-Изглед-Контролер образеца(MVC pattern) написана на функционалния език за програмиране Elixir. Стреми се да предоставя възможност
@@ -69,7 +85,7 @@
         </div>
       </article>
 
-      <article id="intro-elixir">
+      <article id="elixir-intro">
         <h2>На кратко за Elixir </h2>
         <p>
           Elixir е функционален език за програмиране с общо предназначение, който върви върху виртуалната машина на Erlang. Създаден е през 2012 година от José Valim за изследователски проект на Plataformatec, които са също част и от Phoenix core
@@ -86,7 +102,7 @@
     </section>
     <section id="installation">
       <h2>Инсталация</h2>
-      <article id=installation-elixir class="installation elixir">
+      <article id=elixir-installation class="installation elixir">
         <h3>Инсталация на Elixir</h3>
         <p>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова. Инсталираме Elixir следвайки инструкциите по-долу за определената операционна система.</p>
         <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
@@ -144,7 +160,7 @@
       <article class="installation elixir other hidden">
         <p>Ако използвате друга операционна система или версия, може да погледнете как да инсталирате Elixir на следната <a href="https://elixir-lang.org/install.html" target="_blank">инсталационна страница.</a></p>
       </article>
-      <article class="version-check">
+      <article id="elixir-version-check" class="version-check">
         <h3>Проверка на версията на Elixir и Erlang</h3>
         <p>Можем да проверим дали сме инсталирали правилната версия на Elixir и Erlang, чрез следната команда:</p>
         <figure class="code">
@@ -160,7 +176,7 @@ Elixir 1.11.2 (compiled with Erlang/OTP 23)</samp></pre>
           <figcaption></figcaption>
         </figure>
       </article>
-      <article class="hex-installation">
+      <article id="hex-installation">
         <h3>Инсталация на Hex</h3>
         <p>За да започнем да работим с Phoenix, освен Elixir, е необходимо да имаме и Hex. Hex е мениджър, който служи за да инсталира всички необходими пакети за използването на Phoenix.
         </p>
@@ -170,11 +186,11 @@ Elixir 1.11.2 (compiled with Erlang/OTP 23)</samp></pre>
           <figcaption></figcaption>
         </figure>
       </article>
-      <article class="nodejs-installation">
+      <article id="nodejs-installation">
         <h3>Инсталация на NodeJs</h3>
         <p>TODOTODOTODOTODO</p>
       </article>
-      <article class="installation-phoenix">
+      <article id="phoenix-installation">
         <h3>Инсталация на Phoenix </h3>
         <p>След като се погрижихме за Elixir и Hex остава единствено да инсталираме Phoenix. За да инсталираме последната версия на Phoenix трябва да изпълним следната команда:</p>
         <figure class="code">
@@ -185,12 +201,12 @@ Elixir 1.11.2 (compiled with Erlang/OTP 23)</samp></pre>
     </section>
     <section id="getting-started-guide">
       <h2>Примерен начален проект с Phoenix</h2>
-      <article>
+      <article id="intro-to-guide">
         <h3>Предговор</h3>
         <p>Целта е да разработим опростен пример за създаване на приложения с Phoenix, затова няма да използваме система за управление на бази от данни.</p>
         <p>Phoenix предлага няколко различни среди. В примера ще използваме development средата, тъй като тя предлага повече възможности като автоматично презареждане след промени и по-подробни съобщения за грешки.</p>
       </article>
-      <article>
+      <article id="project-creation-guide">
         <h3>Създаване на проект</h3>
         <p>За да създадем нов Phoenix проект с името application_name използваме командата:</p>
         <figure class="code">
@@ -229,7 +245,7 @@ You can also run your app inside IEx (Interactive Elixir) as:
           <figcaption></figcaption>
         </figure>
       </article>
-      <article>
+      <article id="project-start-guide">
         <h3>Стартиране на проект</h3>
         <p>Отваряме нивосъздадената demo директория и след това стартираме Phoenix сървъра, чрез командата:</p>
         <figure class="code">
@@ -260,7 +276,7 @@ Version: webpack 4.41.5
           <figcaption>Фигура 6: Начална Страница Phoenix</figcaption>
         </figure>
       </article>
-      <article>
+      <article id="add-page-guide">
         <h3>Добавяне на страница</h3>
         <section>
           <h4>Предговор</h4>
@@ -373,7 +389,7 @@ end
           </figure>
         </section>
       </article>
-      <article>
+      <article id ="stop-guide">
         <h3>Спиране</h3>
         <p>За да спрем Phoenix сървърa трябва да натиснем 2 пъти <kbd>Ctrl</kbd> + <kbd>C</kbd> </p>
       </article>
