@@ -253,7 +253,7 @@ Version: webpack 4.41.5
         <h3>Добавяне на страница</h3>
         <section>
           <h4>Предговор</h4>
-          <p>Ще създадем страница,показваща текста "Hello", която да може да бъде достъпена на http://localhost:4000/hello</p>
+          <p>Ще създадем страница,показваща текста "Hello World!", която да може да бъде достъпена на http://localhost:4000/hello</p>
         </section>
         <section>
           <h4>Добавяне на маршрут</h4>
@@ -321,7 +321,7 @@ lib/demo_web/templates/
             За да добавим нов темплейт за нашата hello станица просто трябва да създадем следния файл
           <pre class="bash"> lib/demo_web/templates/hello/hello.html.eex</pre>.
           Казахме, че искаме тя да показва текста "hello" затова в него добавяме следния ред<code>
-            <h1> Hello! </h1>
+            <h1> Hello World! </h1>
           </code>
           </p>
         </section>
@@ -337,7 +337,7 @@ end
         </section>
         <section>
           <p>Ако отворим http://localhost:4000/hello ще видим следния резултат</p>
-          <figure class="single picture">
+          <figure id="figure7" class="single picture">
             <img src="img/getting-started/phoenix-hello.png" alt="Our hello page">
             <figcaption>Фигура 7: Phoenix Hello станица</figcaption>
           </figure>
@@ -462,6 +462,13 @@ end
               <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png", target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world-first-view.png</a>
             </pre>
           </li>
+          <li>
+            <pre>
+              <a class="figure name" href="#figure7">"Phoenix Hello"</a>
+              <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world.png", target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world.png</a>
+            </pre>
+          </li>
+
         </ol>
       </article>
     </section>
