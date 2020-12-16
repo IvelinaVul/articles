@@ -149,17 +149,35 @@ pre.bash {
   white-space: pre-wrap;
   word-break: normal;
   background-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  width: 80%;
+  padding: 10px;
+  width: auto;
   color: white;
   font-size: 16px;
   font-family: monospace;
   display: inline-block;
 }
-.single.picture img{
+pre code {
+  display: inline-block;
+  padding: 10px;
+}
+pre code.elixir{
+  
+}
+
+.single.picture img {
   display: block;
   margin: auto;
   width: 70%
+}
+
+kbd {
+  background-color: lightgray;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
 }
