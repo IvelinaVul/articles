@@ -1,10 +1,16 @@
 body {
+  background-color: #ffeed0;
   font-size: 18px;
   font-family: helvetica;
+  color: black;
   margin: 0;
   word-wrap: normal;
   box-sizing: border-box;
   counter-reset: codeSnippetCount;
+}
+
+mark {
+  background-color: #00C6BC;
 }
 
 main {
@@ -12,12 +18,15 @@ main {
 }
 
 .sidenavigation {
+  font-weight: bold;
+  background-color: #402E32;
   position: static;
   margin: 0;
   height: 100%;
 }
 
 .sidenavigation ul {
+  background-color: inherit;
   margin-top: 0;
   margin-right: 30;
   padding: 0;
@@ -29,6 +38,7 @@ main {
 }
 
 .sidenavigation ul li {
+  background-color: inherit;
   width: 150px;
   position: relative;
   display: block;
@@ -39,7 +49,7 @@ main {
 
 .sidenavigation ul li a {
   display: block;
-  color: #000;
+  color: #ffeed0;
   padding: 8px 16px;
   text-decoration: none;
 }
@@ -69,6 +79,7 @@ main {
 }
 
 #logo-container figure img {
+  background-color: white;
   margin-top: 8px;
   width: 80%;
 }
@@ -98,6 +109,8 @@ main {
 }
 
 .installation button {
+  font-weight: bold;
+  outline: none;
   font-size: 20px;
   text-align: left;
   background-color: inherit;
@@ -113,11 +126,11 @@ main {
 .installation button:hover {
   border: none;
   border-bottom: solid gray 6px;
-  background-color: gray;
+  background-color: #C8D9FE;
 }
 
 .installation button.active {
-  border-bottom: solid red 6px;
+  border-bottom: solid #3B4D6C 6px;
 }
 
 @media screen and (max-width: 900px) {
@@ -137,9 +150,10 @@ figure.code, figure.samp {
 }
 
 figure.code figcaption, figure.samp figcaption {
-  background-color: gray;
+  background-color: #C8D9FE;
   margin-top: 10px;
   font-size: 16px;
+  color: black;
   counter-increment: codeSnippetCount;
 }
 
