@@ -4,36 +4,44 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/defalt.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <script src="javascript/default.js"></script>
   <title>Phoenix </title>
   <!--[if IE lte 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
-  <nav class="sidenavigation">
+  <header>
+  </header>
+  <nav id="sidenavigation" class="sidenavigation closed">
+    <button onclick="toggleMenu('sidenavigation')" type="button" name="button"><i class="fas fa-bars fa-2x"></i></button>
     <ul>
+      <li><a href="#intro">Въведение<i class="fas fa-chevron-circle-down"></i></a></li>
+      <li><a href="#installation">Инсталация<i class="fas fa-chevron-circle-down"></i></a></li>
+      <li><a href="#getting-started-guide">Начален пример<i class="fas fa-chevron-circle-down"></i></a> </li>
+      <li><a href="#resources">Източници<i class="fas fa-chevron-circle-down"></i></a></li>
       <!--todo introduction -->
-      <li><a href="#phoenix-intro">Въведение:</a></li>
+      <!-- <li><a href="#phoenix-intro">Въведение:</a></li>
       <li><a href="#phoenix-users">Известни потребители:</a></li>
-      <li><a href="#elixir-intro">На кратко за Elixir</a></li>
+      <li><a href="#elixir-intro">На кратко за Elixir</a></li> -->
       <!--todo installation -->
-      <li><a href="#elixir-installation">Инсталация Elixir</a> </li>
+      <!-- <li><a href="#elixir-installation">Инсталация Elixir</a> </li>
       <li><a href="#elixir-version-check">Проверка на версия</a></li>
       <li> <a href="#hex-installation">Hex инсталация</a> </li>
       <li><a href="#nodejs">Node.js</a></li>
-      <li><a href="#phoenix-installation">Phoenix инсталация </a> </li>
+      <li><a href="#phoenix-installation">Phoenix инсталация </a> </li> -->
 
       <!--todo guide -->
-      <li> <a href="#intro-to-guide">Примерен проект </a></li>
+      <!-- <li> <a href="#intro-to-guide">Примерен проект </a></li>
       <li><a href="#project-creation-guide">Създаване на проект</a> </li>
       <li><a href="#project-start-guide">Стартиране на проект </a></li>
       <li><a href="#add-page-guide">Добавяне на страница</a> </li>
-      <li><a href="#stop-guide">Спиране </a></li>
+      <li><a href="#stop-guide">Спиране </a></li> -->
 
 
     </ul>
   </nav>
-  <main>
+  <section id="main-container">
     <h1>Phoenix</h1>
     <section id="intro">
       <article id="phoenix-intro">
@@ -188,7 +196,8 @@ Elixir 1.11.2 (compiled with Erlang/OTP 23)</samp></pre>
       </article>
       <article id="nodejs">
         <h3>Node.js</h3>
-        <p>Phoenix по подразбиране използва webpack за да компилира статични файлове(JavaScript,CSS,и други). Webpack използва npm за да инсталира необходимите пакети. Следователно ако използваме webpack се нуждаем от node.js, тъй като npm го изисква.</p>
+        <p>Phoenix по подразбиране използва webpack за да компилира статични файлове(JavaScript,CSS,и други). Webpack използва npm за да инсталира необходимите пакети. Следователно ако използваме webpack се нуждаем от node.js, тъй като npm го
+          изисква.</p>
         <p>Ако няма да използваме статични файлове, можем да подадем --no-webpack таг-а при създаване на нов проект и тогава node.js няма да ни е необходим.
         </p>
         <p>Трябва да се вземе в предвид, че Phoenix изисква да се инсталираме версия 5.0.0 или по-нова.
@@ -394,7 +403,7 @@ end
           </figure>
         </section>
       </article>
-      <article id ="stop-guide">
+      <article id="stop-guide">
         <h3>Спиране</h3>
         <p>За да спрем Phoenix сървърa трябва да натиснем 2 пъти <kbd>Ctrl</kbd> + <kbd>C</kbd> </p>
       </article>
@@ -522,11 +531,10 @@ end
               <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world.png", target="_blank">https://www.wintermeyer-consulting.de/books/phoenix/1.5/images/hello-world.png</a>
             </pre>
           </li>
-
         </ol>
       </article>
     </section>
-  </main>
+  </section>
 </body>
 
 </html>

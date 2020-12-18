@@ -8,11 +8,23 @@ function showInstalationInstructions(technology, operatingSystem) {
   current.className = current.className.replace(" hidden", " active");
   activateButton(`.installation.${technology} button.${operatingSystem}`)
 }
-function deactivateButton(buttonQuery){
-  var button=document.querySelector(buttonQuery);
+
+function deactivateButton(buttonQuery) {
+  var button = document.querySelector(buttonQuery);
   console.log(button);
-  button.className=button.className.replace(" active","");
+  button.className = button.className.replace(" active", "");
 }
-function activateButton(buttonQuery){
-  document.querySelector(buttonQuery).className+=" active";
+
+function activateButton(buttonQuery) {
+  document.querySelector(buttonQuery).className += " active";
+}
+
+function toggleMenu(id) {
+  var menu = document.getElementById(id);
+  if (menu.className.search("closed") == -1) {
+    menu.className = menu.className+=" closed";
+  } else {
+    menu.className = menu.className.replace(" closed", "");
+
+  }
 }

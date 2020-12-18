@@ -1,11 +1,22 @@
-body {
-  background-color: #fffaf1;
+* {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-family: helvetica;
-  color: black;
-  margin: 0;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  height: 70px;
+  display: flex;
+  top: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #fffaf1;
   word-wrap: normal;
-  box-sizing: border-box;
   counter-reset: codeSnippetCount;
 }
 
@@ -13,52 +24,89 @@ mark {
   background-color: #00C6BC;
 }
 
-main {
-  margin-left: 160px;
+#main-container {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 70px;
+  width: calc(100%-70px);
+  padding: 10px;
+}
+
+.sidenavigation.closed {
+  background-color: inherit;
+  width: 60px;
+  overflow-y: hidden;
+}
+
+.sidenavigation.closed ul {
+  visibility: hidden;
 }
 
 .sidenavigation {
+  z-index: 1;
   font-weight: bold;
-  background-color: #402E32;
-  position: static;
-  margin: 0;
+  background-color: #534347;
+  position: fixed;
+  width: 280px;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 0.3s;
+  transition-property: width;
+}
+
+.sidenavigation button {
+  float: right;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.sidenavigation.closed button {
+  float: none;
 }
 
 .sidenavigation ul {
-  background-color: inherit;
-  margin-top: 0;
-  margin-right: 30;
-  padding: 0;
-  list-style-type: none;
-  top: 0;
-  position: absolute;
-  height: 100%;
-  width: 150px;
+  margin-top: 60px;
 }
 
-.sidenavigation ul li {
+button {
+  border: none;
+  outline: none;
   background-color: inherit;
-  width: 150px;
-  position: relative;
-  display: block;
-  width: 100%;
-  display: flex;
-  text-decoration: none;
+}
+
+.sidenavigation.closed button i {
+  color: #534347;
+}
+
+.sidenavigation button i {
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #fffaf1;
+  transition: 0.2s;
+  transition-property: color;
+}
+
+.sidenavigation button i:hover {
+  color: #70BCFF	;
 }
 
 .sidenavigation ul li a {
   display: block;
+  padding-top: 20px;
+  padding-left: 25px;
   color: #fffaf1;
-  padding: 8px 16px;
   text-decoration: none;
+  position: relative;
+  transition: 0.2s;
+  transition-property: color;
+}
+.sidenavigation ul li a i {
+  padding-left: 10px;
 }
 
 .sidenavigation ul li a:hover {
-  position: relative;
-  background-color: #555;
-  color: #fffaf1;
-  width: 150px;
+  color: #70BCFF	;
 }
 
 #logo-container {
@@ -143,14 +191,19 @@ figure.code, figure.samp {
   background-color: #3B4D6C;
   font-family: monospace;
   margin-left: 0px;
-  display: inline-block;
   color: white;
+  width: 70%;
+}
+
+figure.code code {
+  display: block;
+  margin: auto;
   width: auto;
-  padding: 10px;
 }
 
 figure.code figcaption, figure.samp figcaption {
   background-color: #C8D9FE;
+  width: auto;
   margin-top: 10px;
   font-size: 16px;
   color: black;
