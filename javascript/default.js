@@ -21,10 +21,15 @@ function activateButton(buttonQuery) {
 
 function toggleMenu(id) {
   var menu = document.getElementById(id);
+  var mainContainer= document.getElementById('main-container');
   if (menu.className.search("closed") == -1) {
     menu.className = menu.className+=" closed";
+    mainContainer.style["padding-left"]="60px";
+    mainContainer.style.width="90%";
+
   } else {
     menu.className = menu.className.replace(" closed", "");
-
+    mainContainer.style["padding-left"]="280px";
+    mainContainer.style.width="70%";
   }
 }
