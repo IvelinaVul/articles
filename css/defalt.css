@@ -1,8 +1,10 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
   font-family: helvetica;
+}
+h1,h2,h3,h4,h5{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
 }
 
 header {
@@ -15,9 +17,20 @@ header {
 }
 
 body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
   background-color: #fffaf1;
   word-wrap: normal;
   counter-reset: codeSnippetCount;
+}
+article{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+section{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 mark {
@@ -29,7 +42,6 @@ mark {
   margin-top: 70px;
   margin-left: 70px;
   width: calc(100%-70px);
-  padding: 10px;
 }
 
 .sidenavigation.closed {
@@ -40,6 +52,10 @@ mark {
 
 .sidenavigation.closed ul {
   visibility: hidden;
+}
+.sidenavigation ul{
+  list-style-type: none;
+
 }
 
 .sidenavigation {
@@ -67,6 +83,8 @@ mark {
 
 .sidenavigation ul {
   margin-top: 60px;
+  margin-right: 0px;
+  padding-left: 20px;
 }
 
 button {
@@ -93,7 +111,7 @@ button {
 
 .sidenavigation ul li a {
   display: block;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-left: 25px;
   color: #fffaf1;
   text-decoration: none;
