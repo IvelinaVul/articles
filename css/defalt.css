@@ -208,20 +208,15 @@ button {
 figure.code, figure.samp {
   background-color: #3B4D6C;
   font-family: monospace;
-  margin-left: 0px;
   color: white;
-  width: 70%;
 }
 
 figure.code code {
   display: block;
-  margin: auto;
-  width: auto;
 }
 
 figure.code figcaption, figure.samp figcaption {
   background-color: #C8D9FE;
-  width: auto;
   margin-top: 10px;
   font-size: 16px;
   color: black;
@@ -234,14 +229,16 @@ figure.code figcaption:before, figure.samp figcaption:before {
 
 code {
   background-color: #3B4D6C;
-  width: auto;
   color: white;
   font-size: 16px;
   font-family: monospace;
   display: inline-block;
+  padding: 10px;
+
 }
 
 pre samp {
+  padding: 10px;
   white-space: pre-wrap;
   word-break: normal;
   background-color: #3B4D6C;
@@ -254,6 +251,7 @@ pre samp {
 
 pre code {
   display: inline-block;
+  padding: 10px;
 }
 
 kbd {
