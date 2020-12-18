@@ -22,6 +22,7 @@ body {
   font-size: 18px;
   background-color: #fffaf1;
   word-wrap: normal;
+  font-weight: 500;
   counter-reset: codeSnippetCount;
 }
 article{
@@ -41,7 +42,8 @@ mark {
   position: absolute;
   margin-top: 70px;
   margin-left: 70px;
-  width: calc(100%-70px);
+  padding-left: 10px;
+  width: calc(95% - 70px);
 }
 
 .sidenavigation.closed {
@@ -217,10 +219,10 @@ figure.code code {
 
 figure.code figcaption, figure.samp figcaption {
   background-color: #C8D9FE;
-  margin-top: 10px;
   font-size: 16px;
   color: black;
   counter-increment: codeSnippetCount;
+  padding: 4px;
 }
 
 figure.code figcaption:before, figure.samp figcaption:before {
@@ -230,11 +232,11 @@ figure.code figcaption:before, figure.samp figcaption:before {
 code {
   background-color: #3B4D6C;
   color: white;
-  font-size: 16px;
   font-family: monospace;
   display: inline-block;
-  padding: 10px;
-
+  padding-top: 15px;
+  padding:10px;
+  height: 25px;
 }
 
 pre samp {
@@ -244,14 +246,15 @@ pre samp {
   background-color: #3B4D6C;
   width: auto;
   color: white;
-  font-size: 16px;
   font-family: monospace;
   display: inline-block;
 }
 
 pre code {
   display: inline-block;
-  padding: 10px;
+  padding-top: 15px;
+  padding:10px;
+  height: auto;
 }
 
 kbd {
