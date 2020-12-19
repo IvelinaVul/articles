@@ -42,7 +42,7 @@
 
 
   </nav>
-  <section id="main-container">
+  <section id="main-container" class=" sidenav-closed">
     <h1>Phoenix</h1>
     <section id="intro">
       <article id="phoenix-intro">
@@ -114,13 +114,13 @@
       <article id=elixir-installation class="installation elixir">
         <h3>Инсталация на Elixir</h3>
         <p>За да започнем да работим с Phoenix първо е необходимо да инсталираме Elixir, като весията трябва да е 1.6 или по-нова. Инсталираме Elixir следвайки инструкциите по-долу за определената операционна система.</p>
-        <button class="ubuntu active" onclick="showInstalationInstructions('elixir','ubuntu')">
+        <button class="ubuntu active" onclick="toggleInstalationInstructions('elixir','ubuntu')">
           Ubuntu
         </button>
-        <button class="windows" onclick="showInstalationInstructions('elixir','windows')">
+        <button class="windows" onclick="toggleInstalationInstructions('elixir','windows')">
           Windows
         </button>
-        <button class="other" onclick="showInstalationInstructions('elixir','other')">
+        <button class="other" onclick="toggleInstalationInstructions('elixir','other')">
           Други
         </button>
       </article>

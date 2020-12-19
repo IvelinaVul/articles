@@ -1,4 +1,4 @@
-function showInstalationInstructions(technology, operatingSystem) {
+function toggleInstalationInstructions(technology, operatingSystem) {
   var active = document.querySelector(`.installation.${technology}.active`);
   active.className = active.className.replace(" active", "");
   active.className += " hidden";
@@ -11,7 +11,6 @@ function showInstalationInstructions(technology, operatingSystem) {
 
 function deactivateButton(buttonQuery) {
   var button = document.querySelector(buttonQuery);
-  console.log(button);
   button.className = button.className.replace(" active", "");
 }
 
@@ -21,15 +20,29 @@ function activateButton(buttonQuery) {
 
 function toggleMenu(id) {
   var menu = document.getElementById(id);
-  var mainContainer= document.getElementById('main-container');
-  if (menu.className.search("closed") == -1) {
-    menu.className = menu.className+=" closed";
-    mainContainer.style["padding-left"]="60px";
-    mainContainer.style.width="90%";
-
+  var mainContainer = getMainContainer();
+  if (isClosedMenu(menu)) {
+    openMenu(menu);
+    mainContainer.className = mainContainer.className.replace(" sidenav-closed", " sidenav-opened");
   } else {
-    menu.className = menu.className.replace(" closed", "");
-    mainContainer.style["padding-left"]="280px";
-    mainContainer.style.width="70%";
+    closeMenu(menu);
+    mainContainer.className = mainContainer.className.replace(" sidenav-opened", " sidenav-closed");
   }
+
+  function isClosedMenu(menu) {
+    return menu.className.search("closed") != -1;
+  }
+
+  function closeMenu(menu) {
+    menu.className = menu.className.replace(" opened", " closed");
+  }
+
+  function openMenu(menu) {
+    menu.className = menu.className.replace(" closed", " opened");
+  }
+
+  function getMainContainer() {
+    return document.getElementById('main-container');
+  }
+
 }

@@ -39,12 +39,19 @@ mark {
   background-color: #00C6BC;
 }
 
-#main-container {
+#main-container.sidenav-closed {
   position: absolute;
   margin-top: 70px;
   margin-left: 70px;
-  padding-left: 10px;
-  width: calc(95% - 70px);
+  padding-left: 0px;
+  padding-right: 30px;
+  width: calc(100% - 100px);
+}
+#main-container.sidenav-opened{
+  margin-left: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width:calc(100% - 320px);
 }
 
 .sidenavigation.closed {
