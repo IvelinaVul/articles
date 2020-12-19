@@ -28,21 +28,30 @@ function toggleMenu(id) {
     closeMenu(menu);
     mainContainer.className = mainContainer.className.replace(" sidenav-opened", " sidenav-closed");
   }
+}
 
-  function isClosedMenu(menu) {
-    return menu.className.search("closed") != -1;
+function toggleSubMenu(id) {
+  var menu = document.getElementById(id);
+  if (isClosedMenu(menu)) {
+    openMenu(menu);
+  } else {
+    closeMenu(menu);
   }
+}
 
-  function closeMenu(menu) {
-    menu.className = menu.className.replace(" opened", " closed");
-  }
 
-  function openMenu(menu) {
-    menu.className = menu.className.replace(" closed", " opened");
-  }
+function isClosedMenu(menu) {
+  return menu.className.search("closed") != -1;
+}
 
-  function getMainContainer() {
-    return document.getElementById('main-container');
-  }
+function closeMenu(menu) {
+  menu.className = menu.className.replace(" opened", " closed");
+}
 
+function openMenu(menu) {
+  menu.className = menu.className.replace(" closed", " opened");
+}
+
+function getMainContainer() {
+  return document.getElementById('main-container');
 }

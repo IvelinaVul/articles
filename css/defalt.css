@@ -1,7 +1,8 @@
 * {
   font-family: helvetica;
 }
-h1,h2,h3,h4,h5{
+
+h1, h2, h3, h4, h5 {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 0px;
@@ -26,11 +27,13 @@ body {
   counter-reset: codeSnippetCount;
   overflow-x: auto;
 }
-article{
+
+article {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-section{
+
+section {
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -47,11 +50,12 @@ mark {
   padding-right: 30px;
   width: calc(100% - 100px);
 }
-#main-container.sidenav-opened{
+
+#main-container.sidenav-opened {
   margin-left: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  width:calc(100% - 320px);
+  width: calc(100% - 320px);
 }
 
 .sidenavigation.closed {
@@ -63,9 +67,9 @@ mark {
 .sidenavigation.closed ul {
   visibility: hidden;
 }
-.sidenavigation ul{
-  list-style-type: none;
 
+.sidenavigation ul {
+  list-style-type: none;
 }
 
 .sidenavigation {
@@ -116,7 +120,7 @@ button {
 }
 
 .sidenavigation button i:hover {
-  color: #70BCFF	;
+  color: #70BCFF;
 }
 
 .sidenavigation ul li a {
@@ -129,12 +133,13 @@ button {
   transition: 0.2s;
   transition-property: color;
 }
+
 .sidenavigation ul li a i {
   padding-left: 10px;
 }
 
 .sidenavigation ul li a:hover {
-  color: #70BCFF	;
+  color: #70BCFF;
 }
 
 #logo-container {
@@ -243,7 +248,7 @@ code {
   font-family: monospace;
   display: inline-block;
   padding-top: 15px;
-  padding:10px;
+  padding: 10px;
   height: auto;
 }
 
@@ -261,7 +266,7 @@ pre samp {
 pre code {
   display: inline-block;
   padding-top: 15px;
-  padding:10px;
+  padding: 10px;
   height: auto;
 }
 
@@ -298,4 +303,34 @@ kbd {
 a.figure.name {
   color: black;
   text-decoration: none
+}
+
+.sub.sidenavigation.opened {
+  position: relative;
+  height: auto;
+  width: 220px;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 30px;
+}
+
+.sub.sidenavigation.opened ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sub.sidenavigation.opened ul li {
+  margin:0;
+  padding: 0;
+  word-wrap: break-word;
+}
+.sub.sidenavigation.opened ul li a{
+  margin:0;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 0;
+  padding-bottom: 0;
 }

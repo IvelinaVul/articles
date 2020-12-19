@@ -16,32 +16,45 @@
   <nav id="sidenavigation" class="sidenavigation closed">
     <button onclick="toggleMenu('sidenavigation')" type="button" name="button"><i class="fas fa-bars fa-2x"></i></button>
     <ul>
-      <li><a href="#intro">Въведение<i class="fas fa-chevron-circle-down"></i></a></li>
-      <li><a href="#installation">Инсталация<i class="fas fa-chevron-circle-down"></i></a></li>
-      <li><a href="#getting-started-guide">Начален пример<i class="fas fa-chevron-circle-down"></i></a> </li>
-      <li><a href="#resources">Източници<i class="fas fa-chevron-circle-down"></i></a></li>
+      <li><a href="#intro" onclick="toggleSubMenu('intro-sub-sidenavigation')">Въведение<i class="fas fa-chevron-circle-down"></i></a>
+        <nav id="intro-sub-sidenavigation" class="sub sidenavigation closed">
+          <ul>
+            <li><a href="#phoenix-intro">Phoenix</a></li>
+            <li><a href="#phoenix-users">Известни потребители</a></li>
+            <li><a href="#elixir-intro">Elixir</a></li>
+          </ul>
+        </nav>
+      </li>
+      <li><a href="#installation" onclick="toggleSubMenu('installation-sub-sidenavigation')">Инсталация<i class="fas fa-chevron-circle-down"></i></a>
+        <nav id="installation-sub-sidenavigation" class="sub sidenavigation closed">
+          <ul>
+            <li><a href="#elixir-installation">Elixir</a> </li>
+            <li><a href="#elixir-version-check">Проверка на версия</a></li>
+            <li> <a href="#hex-installation">Hex</a> </li>
+            <li><a href="#nodejs">Node.js</a></li>
+            <li><a href="#phoenix-installation">Phoenix</a> </li>
+          </ul>
+        </nav>
+      </li>
+      <li><a href="#getting-started-guide" onclick="toggleSubMenu('getting-started-sub-sidenavigation')">Примерен проект<i class="fas fa-chevron-circle-down"></i></a>
+        <nav id="getting-started-sub-sidenavigation" class="sub sidenavigation closed">
+          <ul>
+            <li> <a href="#intro-to-guide">Предговор</a></li>
+            <li><a href="#project-creation-guide">Създаване</a> </li>
+            <li><a href="#project-start-guide">Стартиране</a></li>
+            <li><a href="#add-page-guide">Добавяне на страница</a> </li>
+            <li><a href="#stop-guide">Спиране </a></li>
+          </ul>
+        </nav>
+      </li>
+      <li><a href="#resources">Източници</a>
+      </li>
     </ul>
-    <!--todo introduction -->
-    <!-- <li><a href="#phoenix-intro">Въведение:</a></li>
-      <li><a href="#phoenix-users">Известни потребители:</a></li>
-      <li><a href="#elixir-intro">На кратко за Elixir</a></li> -->
-    <!--todo installation -->
-    <!-- <li><a href="#elixir-installation">Инсталация Elixir</a> </li>
-      <li><a href="#elixir-version-check">Проверка на версия</a></li>
-      <li> <a href="#hex-installation">Hex инсталация</a> </li>
-      <li><a href="#nodejs">Node.js</a></li>
-      <li><a href="#phoenix-installation">Phoenix инсталация </a> </li> -->
-
-    <!--todo guide -->
-    <!-- <li> <a href="#intro-to-guide">Примерен проект </a></li>
-      <li><a href="#project-creation-guide">Създаване на проект</a> </li>
-      <li><a href="#project-start-guide">Стартиране на проект </a></li>
-      <li><a href="#add-page-guide">Добавяне на страница</a> </li>
-      <li><a href="#stop-guide">Спиране </a></li> -->
-
-
-
   </nav>
+
+
+
+
   <section id="main-container" class=" sidenav-closed">
     <h1>Phoenix</h1>
     <section id="intro">
@@ -284,7 +297,8 @@ Version: webpack 4.41.5
           <figcaption></figcaption>
         </figure>
         <p>
-          По време на изпълнение на командата кодът, който до момента не е бил компилиран, се компилира. За да стартираме началната страница на Phoenix отваряме в избран от нас browser следния адрес <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>.
+          По време на изпълнение на командата кодът, който до момента не е бил компилиран, се компилира. За да стартираме началната страница на Phoenix отваряме в избран от нас browser следния адрес <a href="http://localhost:4000"
+            target="_blank">http://localhost:4000</a>.
         </p>
         <figure id="figure6" class="single picture">
           <img src="img/getting-started/phoenix-start.png" alt="Phoenix start">
@@ -295,7 +309,7 @@ Version: webpack 4.41.5
         <h3>Добавяне на страница</h3>
         <section>
           <h4>Предговор</h4>
-          <p>Ще създадем страница,показваща текста "Hello World!", която да може да бъде достъпена на <a href="http://localhost:4000/hello",target="_blank">http://localhost:4000/hello</a></p>
+          <p>Ще създадем страница,показваща текста "Hello World!", която да може да бъде достъпена на <a href="http://localhost:4000/hello" ,target="_blank">http://localhost:4000/hello</a></p>
         </section>
         <section>
           <h4>Добавяне на маршрут</h4>
