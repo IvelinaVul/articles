@@ -271,11 +271,13 @@ pre code {
 }
 
 kbd {
-  background-color: lightgray;
-  border-radius: 3px;
+  background-color: #3B4D6C;
+  color: white;
+  font-family: monospace;
+  border-radius: 5px;
   border: 1px solid #b4b4b4;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1;
   padding: 2px 4px;
